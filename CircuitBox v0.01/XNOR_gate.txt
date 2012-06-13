@@ -1,0 +1,8 @@
+XNOR_gate class
+
+The XNOR_gate class represents a digital component xnor gate. It has a value of 0 if only one of its inputs'
+values is 1, and it has a value of 1 otherwise.
+
+The XNOR_gate evaluate function searches through the inputs vector to find all inputs whose value is 1. If it finds
+more than one input whose value is 1, it will return true. If it finds no inputs whose value is 1, it will also return
+true. It will return false only if one input has a value of 1.

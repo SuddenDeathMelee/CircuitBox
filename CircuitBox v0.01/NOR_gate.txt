@@ -1,0 +1,7 @@
+NOR_gate class
+
+The NOR_gate class represents a digital component xor gate. It has a value of 1 if all of its inputs have
+a value of 0, and has a value of false otherwise.
+
+The NOR_gate evaluate function searches through the inputs vector to find a 1. If it finds one, the function
+returns false, It will return true otherwise.
