@@ -1,0 +1,57 @@
+#pragma once
+#include <stdlib.h>
+#include <vector>
+#include <iostream>
+#include <typeinfo>
+#include "Chip.h"
+using namespace std;
+
+class _74139: public Chip{
+	public:
+		//Constructors
+		_74139(){
+			num_outputs=8;
+			
+			int i;
+			for(i=0; i<6; ++i){
+				inputs[i]=NULL;
+			}
+		}
+		_74139(vector<logic_object*> inputs_){
+			num_outputs=8;
+			
+			if(inputs_.size()>6){
+				cout<<"Too many inputs, size should be 6"<<endl;
+				return;
+			}
+			int i;
+			
+			for(i=0; i<6; ++i){
+				inputs[i]=NULL;
+			}
+			
+			for(i=0; i<inputs_.size(); ++i){
+				inputs[i]=inputs_[i];
+			}
+		}
+		//Logic Functions
+		void pin_to_output(logic_object* output, int pin_input, int pin_output);
+		void input_to_pin(logic_object* input, int pin);
+		int chip_evaluate(Chip* obj, int pin);
+		void evaluate();
+		bool g1_enabled();
+		bool g2_enabled();
+		void restructure();
+		bool evaluate_pin(int pin){}
+		bool restructure_pin(int pin){}		
+		bool outputs_filled();
+		vector<bool> value(logic_object* obj);
+		bool value(logic_object* obj, int pin_);
+		bool output_connected(int pin);
+		void print_value();
+	private:
+		logic_object* inputs[6];
+		bool outputs[8];
+		logic_object* output_objects[8];
+	
+};
