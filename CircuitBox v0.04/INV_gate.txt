@@ -1,0 +1,6 @@
+INV_gate class
+
+The INV_gate class represents a digital component invert gate. It has a value opposite to that of its input's
+value.
+
+The INV_gate evaluate function  stores the opposite value of its input's value.
