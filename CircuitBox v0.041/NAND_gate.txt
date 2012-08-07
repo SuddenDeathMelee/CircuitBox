@@ -1,0 +1,7 @@
+NAND_gate class
+
+The NAND_gate class represents a digital component nand gate. It has a value of 0 if all of its inputs have
+a value of 1, and has a value of true otherwise.
+
+The NAND_gate evaluate function searches through the inputs vector to find a 0. If it finds one, the function
+returns true, It will return false otherwise.
