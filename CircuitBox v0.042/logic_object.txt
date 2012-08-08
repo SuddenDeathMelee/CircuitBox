@@ -1,0 +1,18 @@
+logic_object class
+
+The logic_object class is a parent class to logic component classes such as AND_gate, OR_gate, the 74 series IC classes, swtiches, etc. It provides
+functions to help manage and manipulate the inputs for the component. It has two virtual functions, evaluate and restructure. These are defined 
+differently within each child class. These virtual functions allow a logic_object to be used as a parameter to which several different children
+classes of logic_object are passed, and their individual evaluate and restructure functions can be called.
+
+The evaluate function looks at the input of the component to determine the logical value (true or false). Each child class of logic object has it's
+own unique evaluate function. For example, AND_gate will look through its inputs until it finds one whose logic value is false (or 0). If it finds no
+false inputs, it will set its value to true- otherwise it will be false.
+
+The restructure function uses the evaluate function to determine if the component's value needs to be changed. If the value is changed, then the 
+restructure function is called on the component's output (logic_object* output in logic_object.h). If restructure finds that the value is not changed,
+it will return without calling restructure on its output. This will allow a whole circuit to be restructured if any inputs are changed.
+
+The add_inputs and add_output functions allow the inputs and output of the component to be set. add_output will choose to which component the logic_object
+will point, or sent it's output. The member variable inputs can be manipulated with add_inputs. The change_value function will allow you to replace one 
+input with another.
