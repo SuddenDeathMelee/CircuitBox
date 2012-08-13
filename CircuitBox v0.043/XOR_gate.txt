@@ -1,0 +1,8 @@
+XOR_gate class
+
+The XOR_gate class represents a digital component and gate. It has a value of 1 if only one of its inputs has
+a value of 1, and it has a value of false otherwise.
+
+The XOR_gate evaluate function searches through the inputs vector to find all inputs whose value is 1. 
+If it finds one, the function will increment a variable. After all inputs have been searched through,
+the fuction will return true only if a single 1 was found.

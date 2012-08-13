@@ -1,0 +1,7 @@
+AND_gate class
+
+The AND_gate class represents a digital component and gate. It has a value of 1 if all of its inputs have
+a value of 1, and has a value of false otherwise.
+
+The AND_gate evaluate function searches through the inputs vector to find a 0. If it finds one, the function
+returns false, It will return true otherwise.
