@@ -1,0 +1,5 @@
+input class
+
+The input class exists as only an input for other logic objects. It does not take any inputs of its
+own, and it's only capability is to switch values from true to false or from false to true. It acts
+as a switch for other logic objects.
