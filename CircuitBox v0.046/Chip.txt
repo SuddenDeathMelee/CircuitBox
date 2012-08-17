@@ -1,0 +1,3 @@
+The chip object was made to differentiate between logic objects that have multiple inputs and outputs (as opposed to gates, which are much simpler).
+The chip object needs to not only keep track of its inputs, but also the logic elements to which its output pins are connect and what pins each of 
+those elements is connected to. 
